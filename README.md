@@ -41,8 +41,8 @@ Git Integration is only tested on Fedora based Systems and Ubuntu.
 ## Installation
 You can run the installer as root for global installation or as a user for installation in your home directory.
 
-1.  Please Download the release package from <>
-2.  Unpack it via `unzip wtd-bash-prompt.zip`
+1.  Please Download the release package from <https://github.com/while-true-do/wtd-bash-prompt/releases>
+2.  Unpack it via `unzip`
 3.  Make the installer executable `chmod +x install.sh`
 4.  Run the installer `./install.sh`
 
