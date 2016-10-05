@@ -66,4 +66,4 @@ This work is licensed under a [BSD License](https://opensource.org/licenses/BSD-
 
 **github:** <https://github.com/daniel-wtd>
 
-**contact:** [info@while-true-do.org](mailto:mail@while-true-do.org)
+**contact:** [mail@while-true-do.org](mailto:mail@while-true-do.org)
