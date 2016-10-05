@@ -56,7 +56,7 @@ This work is licensed under a [BSD License](https://opensource.org/licenses/BSD-
 
 ## Contribute / Bugs
 
-**Roadmap:** <./ROADMAP.md>
+**Roadmap:** [ROADMAP.md](ROADMAP.md)
 
 **bug reports:** <https://github.com/while-true-do/wtd-bash-prompt/issues>
 
