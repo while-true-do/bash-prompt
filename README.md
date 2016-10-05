@@ -13,7 +13,7 @@
 
 Shows a little, red "x" at the beginning of the prompt, if the last command was not successful or returns non-zero.
 
-#### git-Prompt
+#### Git integration
 
 The usage of [git-prompt.sh](https://github.com/git/git/blob/master/contrib/completion/git-prompt.sh) is implemented and will be used, if git is installed. So you can see the git status in your prompt, when joining a git directory.
 
@@ -55,6 +55,8 @@ You can run the installer as root for global installation or as a user for insta
 This work is licensed under a [BSD License](https://opensource.org/licenses/BSD-3-Clause).
 
 ## Contribute / Bugs
+
+**Roadmap:** <./ROADMAP.md>
 
 **bug reports:** <https://github.com/while-true-do/wtd-bash-prompt/issues>
 
