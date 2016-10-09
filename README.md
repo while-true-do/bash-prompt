@@ -1,4 +1,4 @@
-# wtd-bash-prompt
+# While-True-Do: Bash Prompt
 | A bash prompt that shows information, only if you really need them.
 
 ## Features

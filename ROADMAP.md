@@ -1,4 +1,4 @@
-# Roadmap wtd-bash-prompt
+# Roadmap Bash-Prompt
 | This is not final and can be improved at any time.
 
 ## Alpha
