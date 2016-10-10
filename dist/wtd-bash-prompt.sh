@@ -9,9 +9,9 @@
 [[ $- == *i* ]] || return 0
 
 # Which OS do we use?
-if [[ $(grep -i fedora /etc/os-release) ]];then
+if grep -q -i fedora /etc/os-release ;then
   WTD_GIT_PROMPT_PATH="/usr/share/git-core/contrib/completion/git-prompt.sh"
-elif [[ $(grep -i debian /etc/os-release) ]]; then
+elif grep -q -i debian /etc/os-release ; then
   WTD_GIT_PROMPT_PATH="/etc/bash_completion.d/git-prompt"
 fi
 
