@@ -1,7 +1,9 @@
 #!/bin/bash
-# A Script to colorize your prompt and use the default git-prompt.sh, if available.
-# It has some handy functions in it as well.
-
+# While True Do - Bash Prompt
+# A bash prompt that shows information, only if you really need them.
+#
+# git@github.com:while-true-do/bash-prompt.git
+#
 # Some testing beforehand
 # Are we in Bash?
 [ -n "$BASH_VERSION" ] || return 0
