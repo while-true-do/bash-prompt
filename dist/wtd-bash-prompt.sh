@@ -1,10 +1,5 @@
 #!/bin/bash
-# While True Do - Bash Prompt
-# A bash prompt that shows information, only if you really need them.
 #
-# git@github.com:while-true-do/bash-prompt.git
-#
-# Some testing beforehand
 # Are we in Bash?
 [ -n "$BASH_VERSION" ] || return 0
 # Are we interactive?
@@ -32,7 +27,7 @@ if [[ $TERM == vte* || xterm* ]]; then
   # Error Notification
   WTD_PS1_B='`if [[ $? -ne 0 ]]; then echo "\[\e[1;31m\]✘ "; fi`'
   # Job Notification
-  WTD_PS1_B+='`if [[ $(jobs -r | wc -l) -ne 0 ]]; then echo -n "\[\e[1;33m\][Jobs: \j] "; fi`'
+  WTD_PS1_B+='`if [[ $(jobs | wc -l) -ne 0 ]]; then echo -n "\[\e[1;33m\][Jobs: \j] "; fi`'
   # Prompt
   if [[ $EUID -eq 0 ]]; then
     WTD_PS1_B+="$WTD_COLOR_ROOT\u"
@@ -57,7 +52,7 @@ else
   # Error Notification
   WTD_PS1_B='`if [[ $? -ne 0 ]]; then echo "✘ "; fi`'
   # Job Notification
-  WTD_PS1_B+='`if [[ $(jobs -r | wc -l) -ne 0 ]]; then echo "[Jobs: \j] "; fi`'
+  WTD_PS1_B+='`if [[ $(jobs | wc -l) -ne 0 ]]; then echo "[Jobs: \j] "; fi`'
   # Prompt
   WTD_PS1_B+="\u@\h "
   WTD_PS1_B+="\w "
