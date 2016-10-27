@@ -54,7 +54,10 @@ else
   # Job Notification
   WTD_PS1_B+='`if [[ $(jobs | wc -l) -ne 0 ]]; then echo "[Jobs: \j] "; fi`'
   # Prompt
-  WTD_PS1_B+="\u@\h "
+  WTD_PS1_B+="\u@"
+  if [[ ! -z $SSH_CLIENT ]]; then
+    WTD_PS1_B+="\h "
+  fi
   WTD_PS1_B+="\w "
   WTD_PS1_E="\\$ "
 fi
