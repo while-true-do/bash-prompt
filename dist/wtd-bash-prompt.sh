@@ -15,14 +15,14 @@ fi
 # Colored Prompt
 if [[ $TERM == vte* || xterm* ]]; then
   # Define some colors
-  WTD_COLOR_USER="\[\e[1;32m\]"
-  WTD_COLOR_ROOT="\[\e[1;31m\]"
-  WTD_COLOR_SYS="\[\e[1;31m\]"
-  WTD_COLOR_AT="\[\e[1;37m\]"
-  WTD_COLOR_HOST="\[\e[1;37m\]"
-  WTD_COLOR_PWD="\[\e[1;37m\]"
-  WTD_COLOR_GIT="\[\e[1;33m\]"
-  WTD_COLOR_END="\[\e[1;37m\]"
+  WTD_COLOR_USER="\[\e[0;32m\]"
+  WTD_COLOR_ROOT="\[\e[0;31m\]"
+  WTD_COLOR_SYS="\[\e[0;31m\]"
+  WTD_COLOR_AT="\[\e[0m\]"
+  WTD_COLOR_HOST="\[\e[0m\]"
+  WTD_COLOR_PWD="\[\e[0m\]"
+  WTD_COLOR_GIT="\[\e[0;36m\]"
+  WTD_COLOR_END="\[\e[0m\]"
   WTD_COLOR_OFF="\[\e[0m\]"
   # Error Notification
   WTD_PS1_B='`if [[ $? -ne 0 ]]; then echo "\[\e[1;31m\]✘ "; fi`'
