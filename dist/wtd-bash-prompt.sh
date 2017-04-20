@@ -10,6 +10,8 @@ if grep -q -i fedora /etc/os-release ;then
   WTD_GIT_PROMPT_PATH="/usr/share/git-core/contrib/completion/git-prompt.sh"
 elif grep -q -i debian /etc/os-release ; then
   WTD_GIT_PROMPT_PATH="/etc/bash_completion.d/git-prompt"
+elif grep -q -i suse /etc/os-release ; then
+  WTD_GIT_PROMPT_PATH="/etc/bash_completion.d/git-prompt.sh"
 fi
 
 # Colored Prompt
