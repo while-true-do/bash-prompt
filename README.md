@@ -31,11 +31,13 @@ When working locally, the prompt has no hostname. After ssh-ing into another hos
 
 ### Requirements
 
-Git Integration is only tested on Fedora based Systems and Ubuntu.
+Git Integration is only tested on Fedora based Systems, openSUSE, archlinux and Ubuntu.
 
 *   RedHat 7.x
 *   CentOS 7.x
 *   Fedora 23+
+*   openSUSE 42.2
+*   archlinux
 
 ## Installation
 You can run the installer as root for global installation or as a user for installation in your home directory.
