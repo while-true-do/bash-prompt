@@ -10,7 +10,7 @@ function install_global() {
 function install_uid() {
   local INSTALLPATH=$HOME/.wtd/
   local SOURCEPATH=$PWD/dist/
-  mkdir $INSTALLPATH
+  mkdir -p $INSTALLPATH
   cp $SOURCEPATH/wtd-bash-prompt.sh $INSTALLPATH
   echo ". $HOME/.wtd/wtd-bash-prompt.sh" >> $HOME/.bashrc
 }
