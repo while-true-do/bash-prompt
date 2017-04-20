@@ -7,7 +7,7 @@
 
 ![Screenshot](img/picture1.png)
 
-<small>The terminal emulator you can see here is [Terminix](https://github.com/gnunn1/terminix). Screenshot is taken by daniel-wtd.</small>
+<small>The terminal emulator you can see here is [Tilix](https://github.com/gnunn1/tilix) (formerly known as terminix). Screenshot is taken by daniel-wtd.</small>
 
 #### Error Display
 
