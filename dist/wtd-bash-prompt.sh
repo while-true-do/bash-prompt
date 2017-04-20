@@ -12,7 +12,7 @@ elif grep -q -i debian /etc/os-release ; then
   WTD_GIT_PROMPT_PATH="/etc/bash_completion.d/git-prompt"
 elif grep -q -i suse /etc/os-release ; then
   WTD_GIT_PROMPT_PATH="/etc/bash_completion.d/git-prompt.sh"
-elif grep -q -i arch /etc/os-release ; then
+elif grep -q -i archlinux /etc/os-release ; then
   WTD_GIT_PROMPT_PATH="/usr/share/git/git-prompt.sh"
 fi
 
