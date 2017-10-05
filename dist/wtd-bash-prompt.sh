@@ -17,7 +17,7 @@ elif grep -q -i archlinux /etc/os-release ; then
 fi
 
 # Colored Prompt
-if [[ $TERM == vte* || xterm* ]]; then
+if [[ $TERM == vte* ]] || [[ $TERM == xterm* ]]; then
   # Define some colors
   WTD_COLOR_USER="\[\e[0;32m\]"
   WTD_COLOR_ROOT="\[\e[0;31m\]"
@@ -29,19 +29,19 @@ if [[ $TERM == vte* || xterm* ]]; then
   WTD_COLOR_END="\[\e[0m\]"
   WTD_COLOR_OFF="\[\e[0m\]"
   # Error Notification
-  WTD_PS1_B='`if [[ $? -ne 0 ]]; then echo "\[\e[1;31m\]✘ "; fi`'
+  WTD_PS1_B='`LAST_EXIT=$?; if [ $LAST_EXIT != 148 ] && [ $LAST_EXIT != 0 ]; then echo "\[\e[1;31m\]✘ "; fi`'
   # Job Notification
-  WTD_PS1_B+='`if [[ $(jobs | wc -l) -ne 0 ]]; then echo -n "\[\e[1;33m\][Jobs: \j] "; fi`'
-  # Prompt
-  if [[ $EUID -eq 0 ]]; then
+  WTD_PS1_B+='`if [ $(jobs | wc -l) -ne 0 ]; then echo -n "\[\e[1;33m\][!⚙ \j] "; fi`'
+  # User Colors
+  if [ $EUID -eq 0 ]; then
     WTD_PS1_B+="$WTD_COLOR_ROOT\u"
-  elif [[ $EUID -lt 1000 ]]; then
+  elif [ $EUID -lt 1000 ]; then
     WTD_PS1_B+="$WTD_COLOR_SYS\u"
   else
     WTD_PS1_B+="$WTD_COLOR_USER\u"
   fi
   # Only show host, if connected via ssh
-  if [[ ! -z $SSH_CLIENT ]]; then
+  if [ ! -z "$SSH_CLIENT" ]; then
     WTD_PS1_B+="$WTD_COLOR_AT@$WTD_COLOR_HOST\h"
   fi
 
@@ -54,19 +54,19 @@ if [[ $TERM == vte* || xterm* ]]; then
 else
   # Uncolored alternative
   # Error Notification
-  WTD_PS1_B='`if [[ $? -ne 0 ]]; then echo "✘ "; fi`'
+  WTD_PS1_B='`LAST_EXIT=$?; if [ $LAST_EXIT != 148 ] && [ $LAST_EXIT != 0 ]; then echo "✘ "; fi`'
   # Job Notification
-  WTD_PS1_B+='`if [[ $(jobs | wc -l) -ne 0 ]]; then echo "[Jobs: \j] "; fi`'
+  WTD_PS1_B+='`if [ $(jobs | wc -l) -ne 0 ]; then echo "[!⚙ \j] "; fi`'
   # Prompt
   WTD_PS1_B+="\u@"
-  if [[ ! -z $SSH_CLIENT ]]; then
+  if [ ! -z "$SSH_CLIENT" ]; then
     WTD_PS1_B+="\h "
   fi
   WTD_PS1_B+="\w "
   WTD_PS1_E="\\$ "
 fi
 # Source the git Prompt and set some options
-if [ -e $WTD_GIT_PROMPT_PATH ]; then
+if [ -e "$WTD_GIT_PROMPT_PATH" ]; then
   export GIT_PS1_SHOWDIRTYSTATE=true
   export GIT_PS1_SHOWSTASHSTATE=true
   export GIT_PS1_SHOWUNTRACKEDFILES=true
