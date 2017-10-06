@@ -31,7 +31,7 @@ if [[ $TERM == vte* ]] || [[ $TERM == xterm* ]]; then
   # Error Notification
   WTD_PS1_B='`LAST_EXIT=$?; if [ $LAST_EXIT != 148 ] && [ $LAST_EXIT != 0 ]; then echo "\[\e[1;31m\]✘ "; fi`'
   # Job Notification
-  WTD_PS1_B+='`if [ $(jobs | wc -l) -ne 0 ]; then echo -n "\[\e[1;33m\][!⚙ \j] "; fi`'
+  WTD_PS1_B+='`if [ $(jobs | wc -l) -ne 0 ]; then echo -n "\[\e[1;33m\]⚙\j "; fi`'
   # User Colors
   if [ $EUID -eq 0 ]; then
     WTD_PS1_B+="$WTD_COLOR_ROOT\u"
@@ -56,7 +56,7 @@ else
   # Error Notification
   WTD_PS1_B='`LAST_EXIT=$?; if [ $LAST_EXIT != 148 ] && [ $LAST_EXIT != 0 ]; then echo "✘ "; fi`'
   # Job Notification
-  WTD_PS1_B+='`if [ $(jobs | wc -l) -ne 0 ]; then echo "[!⚙ \j] "; fi`'
+  WTD_PS1_B+='`if [ $(jobs | wc -l) -ne 0 ]; then echo "⚙\j "; fi`'
   # Prompt
   WTD_PS1_B+="\u@"
   if [ ! -z "$SSH_CLIENT" ]; then
