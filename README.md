@@ -5,7 +5,7 @@
 
 #### Screenshot
 
-![Screenshot](img/picture1.png)
+![Screenshot](img/prompt-demo.gif)
 
 <small>The terminal emulator you can see here is [Tilix](https://github.com/gnunn1/tilix) (formerly known as terminix). Screenshot is taken by daniel-wtd.</small>
 
