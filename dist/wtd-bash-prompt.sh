@@ -17,7 +17,7 @@ elif grep -q -i archlinux /etc/os-release ; then
 fi
 
 # Colored Prompt
-if [[ $TERM == vte* ]] || [[ $TERM == xterm* ]]; then
+if [[ $TERM == vte* ]] || [[ $TERM == xterm* ]] || [[ $TERM == screen-256color ]]; then
   # Define some colors
   WTD_COLOR_USER="\[\e[0;32m\]"
   WTD_COLOR_ROOT="\[\e[0;31m\]"
